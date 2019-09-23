@@ -1,0 +1,28 @@
+Project -DS 
+
+1.	Serevr: Implement bloom filter(bit array) :
+		a.	Set of strings(do not have any special character or white spaces)
+		b.	Constructors
+		c.	Add(String s) –void method
+		d.	isPresent(String s) returns boolean
+		e.	reset() void method : resets the bit array
+		f.	Configurable parameters
+			i.	Size of bloom filter : length of bloom filter
+			ii.	Number of hash functions
+			https://research.cs.vt.edu/AVresearch/hashing/strings.php
+		g.	Seeding techniques to generate multiple hashing functions
+
+2.	Client (Main method): Read commands from an input file
+	add <string>
+	test <string>
+	Output: Print false positive rates
+
+3.	Performance study with respect to the false positive rates
+		a.	Different bloom filter size : 2(8), 2(10), 2(12), 2(14) and 2(16) bits
+		b.	Insert 10,50,100,500,1000 and random words in bloom filters
+		c.	Test with random strings that have not been inserted
+		d.	Plot the false positive rate for each bloom filter size
+		e.	X axis will be the number of words inserted into the filter, Y axis will be the FP rate
+		f.	Three curves in each graph (corresponding to the number of hash functions)
+		g.	Wordlist:
+			http://www-personal.umich.edu/~jlawler/wordlist.html
