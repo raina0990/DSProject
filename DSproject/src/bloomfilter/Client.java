@@ -1,6 +1,15 @@
 package bloomfilter;
 import java.rmi.*;
 import java.io.*;
+import org.jfree.chart.*;
+import org.jfree.chart.plot.PlotOrientation;
+import org.jfree.data.*;
+import org.jfree.data.category.CategoryDataset;
+import org.jfree.data.category.DefaultCategoryDataset;
+import org.jfree.ui.ApplicationFrame;
+import org.jfree.ui.RefineryUtilities;
+
+
 
 public class Client {
 	
@@ -77,7 +86,16 @@ public class Client {
 		    String outLine = "False Positive Rate: " + falserate;
 			   
 		    output_false.writeUTF(outLine);
+		  
+		   
+		   //Performance Analysis
 		    
+		    LineChart chart = new LineChart("Performance Analysis" ,"False Positive Rate vs Number of words");
+		    chart.pack( );
+			RefineryUtilities.centerFrameOnScreen( chart );
+			chart.setVisible( true );
+			   
+		  
 			
 			
 		}//try
@@ -88,6 +106,7 @@ public class Client {
 			finput.close();
 			foutput.close();
 			foutput_false.close();
+			
 			
 		}//finally
 }//main
