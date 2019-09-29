@@ -1,0 +1,10 @@
+first true true
+second false true
+third false true
+fourth false false
+fifth false false 
+sixth false false
+seventh true true
+eighth true true 
+ninth false true
+tenth true true
